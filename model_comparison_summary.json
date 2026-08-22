@@ -1,0 +1,118 @@
+{
+    "models_evaluated": [
+        "logistic_regression",
+        "decision_tree",
+        "random_forest",
+        "xgboost",
+        "neural_network",
+        "ensemble"
+    ],
+    "raw_evaluation_matrix": {
+        "logistic_regression": {
+            "Accuracy": 0.8617886178861789,
+            "Precision": 0.84,
+            "Recall": 0.9882352941176471,
+            "F1_Score": 0.9081081081081082,
+            "ROC_AUC": 0.8529411764705882
+        },
+        "decision_tree": {
+            "Accuracy": 0.8617886178861789,
+            "Precision": 0.8541666666666666,
+            "Recall": 0.9647058823529412,
+            "F1_Score": 0.9060773480662984,
+            "ROC_AUC": 0.7808049535603715
+        },
+        "random_forest": {
+            "Accuracy": 0.8536585365853658,
+            "Precision": 0.8316831683168316,
+            "Recall": 0.9882352941176471,
+            "F1_Score": 0.9032258064516129,
+            "ROC_AUC": 0.8160990712074304
+        },
+        "xgboost": {
+            "Accuracy": 0.8536585365853658,
+            "Precision": 0.8383838383838383,
+            "Recall": 0.9764705882352941,
+            "F1_Score": 0.9021739130434783,
+            "ROC_AUC": 0.7944272445820434
+        },
+        "neural_network": {
+            "Accuracy": 0.7154471544715447,
+            "Precision": 0.7083333333333334,
+            "Recall": 1.0,
+            "F1_Score": 0.8292682926829268,
+            "ROC_AUC": 0.6092879256965944
+        },
+        "ensemble": {
+            "Accuracy": 0.8536585365853658,
+            "Precision": 0.8316831683168316,
+            "Recall": 0.9882352941176471,
+            "F1_Score": 0.9032258064516129,
+            "ROC_AUC": 0.8359133126934984
+        }
+    },
+    "metric_leaders": {
+        "Accuracy": {
+            "winner": [
+                "logistic_regression",
+                "decision_tree"
+            ],
+            "value": 0.8617886178861789
+        },
+        "Precision": {
+            "winner": [
+                "decision_tree"
+            ],
+            "value": 0.8541666666666666
+        },
+        "Recall": {
+            "winner": [
+                "neural_network"
+            ],
+            "value": 1.0
+        },
+        "F1_Score": {
+            "winner": [
+                "logistic_regression"
+            ],
+            "value": 0.9081081081081082
+        },
+        "ROC_AUC": {
+            "winner": [
+                "logistic_regression"
+            ],
+            "value": 0.8529411764705882
+        }
+    },
+    "selection_analysis": {
+        "current_baseline_model": "logistic_regression",
+        "selection_phase": "baseline_checkpoint",
+        "primary_criteria": [
+            "ROC_AUC",
+            "F1_Score"
+        ],
+        "secondary_criteria": [
+            "Accuracy",
+            "Precision"
+        ],
+        "baseline_metrics": {
+            "Accuracy": 0.8617886178861789,
+            "Precision": 0.84,
+            "Recall": 0.9882352941176471,
+            "F1_Score": 0.9081081081081082,
+            "ROC_AUC": 0.8529411764705882
+        },
+        "ensemble_standing": {
+            "is_top_performer": false,
+            "metrics": {
+                "Accuracy": 0.8536585365853658,
+                "Precision": 0.8316831683168316,
+                "Recall": 0.9882352941176471,
+                "F1_Score": 0.9032258064516129,
+                "ROC_AUC": 0.8359133126934984
+            },
+            "roc_auc_delta_vs_leader": -0.017027863777089758
+        },
+        "selection_rationale": "Selected 'logistic_regression' as the current baseline checkpoint leader. It achieved the highest ROC-AUC (0.8529) and highest F1 Score (0.9081) among all six evaluated approaches. The soft-voting ensemble achieved an ROC-AUC of 0.8359 and F1 Score of 0.9032. While competitive, the ensemble was slightly degraded by the baseline Neural Network (ROC-AUC 0.6093), demonstrating that ensembles are not inherently superior to well-tuned single linear models. IMPORTANT: This selection represents the baseline model checkpoint prior to hyperparameter tuning. It does NOT represent the final production deployment model, which will be determined after the planned hyperparameter optimization phase."
+    }
+}

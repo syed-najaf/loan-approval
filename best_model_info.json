@@ -1,0 +1,16 @@
+{
+    "model_name": "logistic_regression",
+    "model_path": "models\\base_models\\logistic_regression.joblib",
+    "selection_phase": "baseline_checkpoint",
+    "selection_metric": "ROC_AUC & F1_Score",
+    "is_ensemble": false,
+    "metrics": {
+        "Accuracy": 0.8617886178861789,
+        "Precision": 0.84,
+        "Recall": 0.9882352941176471,
+        "F1_Score": 0.9081081081081082,
+        "ROC_AUC": 0.8529411764705882
+    },
+    "selection_rationale": "Selected 'logistic_regression' as the current baseline checkpoint leader. It achieved the highest ROC-AUC (0.8529) and highest F1 Score (0.9081) among all six evaluated approaches. The soft-voting ensemble achieved an ROC-AUC of 0.8359 and F1 Score of 0.9032. While competitive, the ensemble was slightly degraded by the baseline Neural Network (ROC-AUC 0.6093), demonstrating that ensembles are not inherently superior to well-tuned single linear models. IMPORTANT: This selection represents the baseline model checkpoint prior to hyperparameter tuning. It does NOT represent the final production deployment model, which will be determined after the planned hyperparameter optimization phase.",
+    "note": "Baseline model selection prior to hyperparameter optimization phase."
+}

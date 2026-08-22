@@ -1,0 +1,30 @@
+# Core Data Manipulation & Mathematical Operations
+# Required for data processing, feature engineering, and inference inputs.
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Machine Learning Pipeline
+# Required for Imputers, Encoders, Scalers, Metrics, and Models 
+# (Logistic Regression, Decision Tree, Random Forest, MLPClassifier, Ensemble)
+scikit-learn>=1.4.0
+
+# Serialization
+# Required for saving/loading preprocessing artifacts and scikit-learn/xgboost models
+joblib>=1.3.0
+
+# Advanced Models
+# Required for the XGBoost base model implementation
+xgboost>=2.0.0
+
+# Explainability
+# Required for generating local and global explanations (force plots, feature importance)
+shap>=0.44.0
+
+# Web Application Frontend
+# Required for the final Presentation Layer (UI, user inputs, rendering results)
+streamlit>=1.32.0
+
+# Visualization
+# Required by comparison.py for evaluation charts and by shap for plotting
+matplotlib>=3.8.0
+seaborn>=0.13.0
